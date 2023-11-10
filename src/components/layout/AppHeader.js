@@ -18,7 +18,6 @@ import { AppHeaderSearch } from 'src/components/header'
 import { TenantSelector } from '../utilities'
 import cyberdrainlogolight from 'src/assets/images/CIPP.png'
 import cyberdrainlogodark from 'src/assets/images/CIPP_Dark.png'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons'
 import { setCurrentTheme, setUserSettings, toggleSidebarShow } from 'src/store/features/app'
@@ -77,16 +76,7 @@ const AppHeader = () => {
   return (
     <>
       <CHeader position="sticky">
-        <CSidebarBrand className="me-auto pt-xs-2 p-md-2" to="/">
-          <CImage
-            className="sidebar-brand-full me-2"
-            src={
-              currentTheme === 'cyberdrain' || preferredTheme === 'cyberdrain'
-                ? cyberdrainlogodark
-                : cyberdrainlogolight
-            }
-            height={80}
-          />
+        <CSidebarBrand className="me-auto pt-xs-2 p-md-2 col-3" to="/">
           <CHeaderNav className="me-2 p-2">
             <CHeaderToggler
               className="me-2"
