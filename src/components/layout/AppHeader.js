@@ -48,6 +48,7 @@ const AppHeader = () => {
     if (isSuccessSettings && !isLoadingSettings && !isFetchingSettings && !performedUserSettings) {
       dispatch(setUserSettings({ userSettings }))
       setUserSettingsComplete(true)
+      dispatch(toggleSidebarShow({ sidebarShow: true }))
     }
   }, [
     isSuccessSettings,
@@ -90,7 +91,7 @@ const AppHeader = () => {
             </CHeaderToggler>
           </CHeaderNav>
         </CSidebarBrand>
-        <CHeaderNav className="p-md-2 flex-grow-1">
+        <CHeaderNav className="p-md-2 flex-grow-2">
           <TenantSelector NavSelector={true} />
           <CNavItem>
             <a
