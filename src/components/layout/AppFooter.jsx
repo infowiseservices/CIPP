@@ -30,12 +30,11 @@ const AppFooter = () => {
           </CLink>
         </p>
       </div>
-      <CFooter className="d-flex justify-content-between align-items-center" position="sticky">
-        <nav className="footer-nav">
-          <Link to="/license">License</Link>
-        </nav>
-      </CFooter>
-      )
+      <nav className="footer-nav">
+        <Link to="/license">License</Link>
+      </nav>
+    </CFooter>
+  )
 }
 
-      export default React.memo(AppFooter)
+export default React.memo(AppFooter)
